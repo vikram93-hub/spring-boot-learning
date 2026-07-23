@@ -1,1 +1,45 @@
+--> Laptop.java
 
+package com.example.demo;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Laptop {
+
+    public void compile() {
+        System.out.println("Compiling using Laptop");
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--> Desktop.java
+
+package com.example.demo;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Desktop {
+
+    public void compile() {
+        System.out.println("Compiling using Desktop");
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-->Alien.java
+
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Alien {
+
+    @Autowired
+    @Qualifier("laptop")
+    private Laptop laptop;
+
+    public void code() {
+        laptop.compile();
+    }
+}
