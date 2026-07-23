@@ -1,1 +1,35 @@
+--> DemoApplication.java
 
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--> HomeController.java
+
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+
+    @GetMapping("/")
+    public String home() {
+        return "Welcome to Spring Boot!";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        return "My first Spring Boot Web Application";
+    }
+}
