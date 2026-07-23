@@ -1,1 +1,76 @@
+--> Computer.java
 
+package com.example.iocdi;
+
+public interface Computer {
+    void compile();
+}
+Laptop.java
+package com.example.iocdi;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Laptop implements Computer {
+
+    @Override
+    public void compile() {
+        System.out.println("Compiling the project...");
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--> Alien.java
+
+package com.example.iocdi;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Alien {
+
+    private final Computer computer;
+
+    @Autowired
+    public Alien(Computer computer) {
+        this.computer = computer;
+    }
+
+    public void code() {
+        System.out.println("Alien is coding...");
+        computer.compile();
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--> AppConfig.java
+
+package com.example.iocdi;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.example.iocdi")
+public class AppConfig {
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--> Main.java
+
+package com.example.iocdi;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Alien alien = context.getBean(Alien.class);
+
+        alien.code();
+
+        context.close();
+    }
+}
