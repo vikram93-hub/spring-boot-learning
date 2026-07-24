@@ -1,4 +1,4 @@
-package com.telusko.controller;
+package com.vikram.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
