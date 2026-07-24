@@ -1,4 +1,4 @@
-package com.telusko.model;
+package com.vikram.model;
 
 
 import lombok.AllArgsConstructor;
