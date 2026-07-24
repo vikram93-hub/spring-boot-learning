@@ -1,4 +1,4 @@
-package com.telusko.service;
+package com.vikram.service;
 
 import com.telusko.model.Product;
 import org.springframework.stereotype.Service;
