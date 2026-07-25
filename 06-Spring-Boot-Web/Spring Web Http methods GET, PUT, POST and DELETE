@@ -1,0 +1,43 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+public class JobController {
+
+    // GET Request
+    @GetMapping("/jobs")
+    public String getJobs() {
+        return "Fetching all jobs...";
+    }
+
+    // GET using Path Variable
+    @GetMapping("/jobs/{id}")
+    public String getJobById(@PathVariable int id) {
+        return "Fetching job with ID: " + id;
+    }
+
+    // GET using Request Body
+    @GetMapping("/jobs/search")
+    public String searchJob(@RequestBody String company) {
+        return "Searching jobs in: " + company;
+    }
+
+    // POST Request using RequestBody
+    @PostMapping("/jobs")
+    public String addJob(@RequestBody String job) {
+        return "Received Job: " + job;
+    }
+
+    // PUT Request using RequestBody
+    @PutMapping("/jobs")
+    public String updateJob(@RequestBody String job) {
+        return "Updated Job: " + job;
+    }
+
+    // DELETE Request
+    @DeleteMapping("/jobs/{id}")
+    public String deleteJob(@PathVariable int id) {
+        return "Deleted Job with ID: " + id;
+    }
+}
