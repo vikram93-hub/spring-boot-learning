@@ -2,7 +2,7 @@
 
 ## Objective
 
-Learn how Spring automatically injects required dependencies using the `@Autowired` annotation.
+Learning how Spring automatically injects required dependencies using the `@Autowired` annotation.
 
 ## What is Autowiring?
 
