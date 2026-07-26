@@ -2,7 +2,7 @@
 
 ## Objective
 
-Learn how Spring Boot automatically creates and injects objects (beans) using annotations instead of manually creating them with the `new` keyword.
+Learning how Spring Boot automatically creates and injects objects (beans) using annotations instead of manually creating them with the `new` keyword.
 
 ## What is Dependency Injection?
 
