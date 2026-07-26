@@ -9,11 +9,11 @@ This repository documents my journey of learning Spring Boot from scratch.
 - ✅ Dependency Injection
 - ✅ Spring Boot
 - ✅ Autowiring
+- ✅ Spring Boot Web
+- ✅ Spring MVC
 
 ## Upcoming Topics
 
-- Spring Boot Web
-- Spring MVC
 - REST APIs
 - CRUD Operations
 - Spring Data JPA
