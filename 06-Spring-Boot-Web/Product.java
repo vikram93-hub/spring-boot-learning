@@ -16,3 +16,7 @@ public class Product {
     private String prodName;
     private int price;
 }
+
+
+
+#here we created our own products instead integrating data from MySql so lombok is used.
