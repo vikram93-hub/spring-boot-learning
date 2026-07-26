@@ -5,7 +5,8 @@ package com.example.iocdi;
 public interface Computer {
     void compile();
 }
-Laptop.java
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--> Laptop.java
 package com.example.iocdi;
 
 import org.springframework.stereotype.Component;
